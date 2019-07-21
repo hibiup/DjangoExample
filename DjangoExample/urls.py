@@ -15,7 +15,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
+
+
+# 引入缺省 /index url
+from . import index
+
+# 引入 app1 模块，为避免歧义，改名为 app1
+from app1.views import index as sample_app
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # 缺省 /index url
+    url(r'^$', index.index),
+
+    # app/index url
+    path('app/', sample_app.hello)
 ]
+

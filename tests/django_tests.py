@@ -5,9 +5,10 @@ import os, sys
 from django.test.utils import get_runner
 from django.conf import settings
 
+import DjangoExample.settings
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'DjangoExample.settings'
-test_dir = os.path.dirname(__file__)
+test_dir = os.path.dirname(__file__) + "/../app1/tests"
 sys.path.insert(0, test_dir)
 
 

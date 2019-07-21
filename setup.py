@@ -17,5 +17,5 @@ setup(
         '': ['config/*.properties', '*.md', 'requirements.txt'],
     },
     install_requires=requirements,
-    test_suite='tests.run_tests.run_tests'
+    test_suite='app1.tests.django_tests.run_tests'
 )
