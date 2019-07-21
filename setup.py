@@ -5,6 +5,7 @@ with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 setup(
+    python_requires='>={}.{}'.format(*(3, 6)),
     name='DjangoExample',
     author='Jeff',
 
@@ -16,4 +17,5 @@ setup(
         '': ['config/*.properties', '*.md', 'requirements.txt'],
     },
     install_requires=requirements,
+    test_suite='tests.run_tests.run_tests'
 )
