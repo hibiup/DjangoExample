@@ -3,3 +3,5 @@
 *.iml
 __pycache__
 *.pyc
+dist
+*-info

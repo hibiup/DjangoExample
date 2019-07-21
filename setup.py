@@ -1,12 +1,11 @@
 from setuptools import setup, find_packages
-
-from examples import __version__
+# from examples import __version__
 
 with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 setup(
-    name=' DjangoExample',
+    name='DjangoExample',
     author='Jeff',
 
     version_command='git describe --always --long --dirty=-dev',
